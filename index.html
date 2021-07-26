@@ -32,36 +32,27 @@
       
       <br>
         <script>
-            function f1(){
-      
-        inputText = document.getElementById("textarea1").value;
-        var payload = {
-          method: 'GET', // *GET, POST, PUT, DELETE, etc.
-          mode: 'cors', // no-cors, *cors, same-origin
-          headers: {
-            'origin': 'https://apesendorfer.github.io'//,
-//            'Content-Type': 'application/json'
-          // body: JSON.stringify(data) // body data type must match "Content-Type" header
-          },
+        function f1(){
+          inputText = document.getElementById("textarea1").value;
+          var payload = {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            body: JSON.stringify(inputText),
+            headers: {
+              'origin': 'https://apesendorfer.github.io',
+              'Content-Type': 'application/json'
+            // body: JSON.stringify(data) // body data type must match "Content-Type" header
+            },
           
-        };
-        const Url = "https://85pmbr8ole.execute-api.us-east-2.amazonaws.com/test/texts";
-        document.getElementById("output").innerHTML = await f2(inputText, Url, payload);
-      }
-      
-      
-
-      function f2(text, Url, payload){ //in the future, text must be taken as a parameter
-  
-        (async () => {
-          let all_text = fetch(Url, payload) //await fetch
-            .then((response) => response.json())
-            .then((data) => {
-              return data;
-            });
-        });
-
-        // return all_text
+          };
+          const Url = "https://85pmbr8ole.execute-api.us-east-2.amazonaws.com/test/texts";
+          fetch(Url, payload)
+            .then(function (response) {
+              return response.json()
+            })
+            .then(function (data) {
+              console.log('post request repsonse data', data)
+            })
       }
         </script>
     </body>
