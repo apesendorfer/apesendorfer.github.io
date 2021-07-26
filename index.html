@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Text Editor</title>
+    </head>
+
+    <body>
+        <section class="">
+        <h1 id = "header">TEXT EDITOR</h1>
+          <div>
+            <div class="row">
+              <div class="col">
+                <button type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Finesse">Finesse it</button>
+
+              </div>
+              
+            </div>
+          </div>
+          <br>
+
+            <div>
+                <textarea  id="textarea1" name="name" rows="15" cols="100" placeholder="Your text here "></textarea>
+            </div>
+
+            <div id="output" rows="15" cols="100">
+            </div>
+          </div>
+        </section>
+      <br>
+      
+      <br>
+        <script>
+            function f1(){
+      
+        inputText = document.getElementById("textarea1").value;
+        var payload = {
+          method: 'GET', // *GET, POST, PUT, DELETE, etc.
+          mode: 'cors', // no-cors, *cors, same-origin
+          headers: {
+          'Content-Type': 'application/json'
+          // body: JSON.stringify(data) // body data type must match "Content-Type" header
+          },
+          
+        };
+        const Url = "https://85pmbr8ole.execute-api.us-east-2.amazonaws.com/test/texts";
+        console.log(fetch(Url, payload));
+        console.log("---------")
+        document.getElementById("output").innerHTML = f2(inputText, Url, payload);
+      }
+      
+      
+
+      function f2(text, Url, payload){ //in the future, text must be taken as a parameter
+  
+        //(async () => {
+          let all_text = fetch(Url, payload) //await fetch
+            .then((response) => response.json())
+            .then((data) => {
+              return data;
+            });
+        //});
+
+        return all_text
+      }
+        </script>
+    </body>
+</html>
