@@ -46,11 +46,11 @@
           
           };
           const Url = "https://85pmbr8ole.execute-api.us-east-2.amazonaws.com/test/texts";
+          var outputText = "";
           fetch(Url, payload)
             .then(function (response) {
               return response.json()
             })
-            var outputText = "";
             .then(function (data) {
               console.log('post request repsonse data', data);
               outputText = data;
