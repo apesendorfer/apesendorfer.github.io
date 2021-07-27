@@ -50,9 +50,9 @@
             .then(function (response) {
               return response.json()
             })
-            var outputText = ""
+            var outputText = "";
             .then(function (data) {
-              console.log('post request repsonse data', data)
+              console.log('post request repsonse data', data);
               outputText = data;
             });
           document.getElementById("output").innerHTML = outputText;
