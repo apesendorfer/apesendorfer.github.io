@@ -56,13 +56,14 @@
               return response.json()
             })
             .then(function (data) {
-              console.log('post request repsonse data["body"]', data["body"]);
-              console.log('post request repsonse data[2]', data[2]);
+              // console.log('post request repsonse data["body"]', data["body"]);
+              // console.log('post request repsonse data[2]', data[2]);
 
-              // for (let i = 0; i < data["body"].length; i++) {
-              //   text += cars[i] + "<br>";
-              // }
-              // console.log('post request repsonse data', data[2]);
+              for (let i = 0; i < data.length; i++) {
+                var str1 = 'post request repsonse data[' + i + ']: '
+                console.log(str1, data[i]);
+
+              }
               document.getElementById("output").innerHTML = data;
               // const obj = JSON.parse(data);
               // console.log(obj)
