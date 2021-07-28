@@ -58,6 +58,8 @@
             .then(function (data) {
               console.log('post request repsonse data', data);
               document.getElementById("output").innerHTML = data;
+              const obj = JSON.parse(data);
+              console.log(obj)
               // outputText = data;
             });
           // document.getElementById("output").innerHTML = outputText;
