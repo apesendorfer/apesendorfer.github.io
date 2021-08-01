@@ -65,27 +65,17 @@
               return response.json()
             })
             .then(function (data) {
-              console.log(data);
-              // console.log('post request repsonse data["body"]', data["body"]);
-              // console.log('post request repsonse data[2]', data[2]);
+              console.log("data: ", data);
+              // input_list = data["input_list"];
+              // output_list = data["output_list"];
               
-              input_list = data["input_list"];
-              output_list = data["output_list"];
-
-              // for (let i = 0; i < data.length; i++) {
-              //   var str1 = 'post request repsonse data[' + i + ']: '
-              //   console.log(str1, data[i]);
-              // }
-
               // document.getElementById("output").innerHTML = data;
-
-              // const obj = JSON.parse(data);
-              // console.log(obj)
-              // outputText = data;
             });
           // document.getElementById("output").innerHTML = outputText;
           // var input_list = ["", "Test", "sentence", "."];
-          f2(input_list)
+          
+          
+          // f2(input_list)
         }
 
         function f2(input_list) {
