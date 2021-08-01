@@ -66,8 +66,8 @@
             })
             .then(function (data) {
               console.log("data: ", data);
-              // input_list = data["input_list"];
-              // output_list = data["output_list"];
+              input_list = data[0];
+              output_list = data[1];
               
               // document.getElementById("output").innerHTML = data;
             });
@@ -75,10 +75,10 @@
           // var input_list = ["", "Test", "sentence", "."];
           
           
-          // f2(input_list)
+          f2()
         }
 
-        function f2(input_list) {
+        function f2() {
           text = ""
           for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
