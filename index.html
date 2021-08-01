@@ -43,6 +43,7 @@
       
       <br>
         <script>
+        var input_list;
         var output_list;
         function f1() {
           inputText = document.getElementById("textarea1").value;
@@ -64,10 +65,12 @@
               return response.json()
             })
             .then(function (data) {
+              console.log(data);
               // console.log('post request repsonse data["body"]', data["body"]);
               // console.log('post request repsonse data[2]', data[2]);
-
-              output_list = data;
+              
+              input_list = data["input_list"];
+              output_list = data["output_list"];
 
               // for (let i = 0; i < data.length; i++) {
               //   var str1 = 'post request repsonse data[' + i + ']: '
@@ -81,7 +84,7 @@
               // outputText = data;
             });
           // document.getElementById("output").innerHTML = outputText;
-          var input_list = ["", "Test", "sentence", "."];
+          // var input_list = ["", "Test", "sentence", "."];
           f2(input_list)
         }
 
