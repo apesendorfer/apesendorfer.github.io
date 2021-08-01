@@ -43,7 +43,6 @@
       
       <br>
         <script>
-        var input_list;
         var output_list;
         function f1() {
           inputText = document.getElementById("textarea1").value;
@@ -60,17 +59,14 @@
           };
           const Url = "https://i7a0fn1zof.execute-api.us-east-2.amazonaws.com/test/suggestions";
           var outputText = "";
+          var input_list;
           fetch(Url, payload)
             .then(function (response) {
               return response.json()
             })
             .then(function (data) {
-              console.log("data: ", data);
+              // console.log("data: ", data);
               input_list = data[0];
-              console.log(input_list.length)
-              for (let i = 0; i < input_list.length; i++) {
-                console.log(input_list[i])
-              }
               output_list = data[1];
               
               // document.getElementById("output").innerHTML = data;
