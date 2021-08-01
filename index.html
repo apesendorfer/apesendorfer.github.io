@@ -63,12 +63,15 @@
               // console.log('post request repsonse data["body"]', data["body"]);
               // console.log('post request repsonse data[2]', data[2]);
 
-              for (let i = 0; i < data.length; i++) {
-                var str1 = 'post request repsonse data[' + i + ']: '
-                console.log(str1, data[i]);
+              output_list = data;
 
-              }
-              document.getElementById("output").innerHTML = data;
+              // for (let i = 0; i < data.length; i++) {
+              //   var str1 = 'post request repsonse data[' + i + ']: '
+              //   console.log(str1, data[i]);
+              // }
+
+              // document.getElementById("output").innerHTML = data;
+
               // const obj = JSON.parse(data);
               // console.log(obj)
               // outputText = data;
@@ -82,14 +85,20 @@
           text = ""
           for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
-            text += "<span id=\"" + i + "\" onclick=\"f3(" + i + ")\"" + ">" + input_list[i] + "</span>";
+            text += "<span id=\"" + i + "\" onclick=\"f3(" + i + ")\"" + ">" + input_list[i] + " " + "</span>";
             }
           }
           document.getElementById("static-input").innerHTML = text;
         }
 
-        function f3() {
-          // Function
+        function f3(i) {
+          text2 = "";
+          if (output_list[i].length > 0) {
+            for (let j = 0; j < output_list[i].length; j++) {
+              text2 += "<button type=\"button\">" + output_list[i][j] + "</button>"
+            }
+          }
+          document.getElementById("choices").innerHTML = text2;
         }
         </script>
     </body>
