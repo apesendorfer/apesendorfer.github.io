@@ -92,7 +92,7 @@
           text2 = "";
           if (output_list[i].length > 0) {
             for (let j = 0; j < output_list[i].length; j++) {
-              text2 += "<button type=\"button\" onclick=\"(document.getElementById(" + i + ").innerHTML = \"" + output_list[i][j] + "\")\">" + output_list[i][j] + "</button>"
+              text2 += "<button type=\"button\" onclick=\"document.getElementById(" + i + ").innerHTML = \"" + output_list[i][j] + "\"\">" + output_list[i][j] + "</button>"
             }
           }
           document.getElementById("choices").innerHTML = text2;
