@@ -28,15 +28,19 @@
             <div>
                 <textarea  id="textarea1" name="name" rows="15" cols="100" placeholder="Your text here "></textarea>
             </div>
+            
+            <div id="static-input"></div>
 
-            <div class="out" id="output">Output Text Here</div>
+            <div id="choices"></div>
+
+            <!-- <div class="out" id="output">Output Text Here</div> -->
           </div>
         </section>
       <br>
       
       <br>
         <script>
-        function f1(){
+        function f1() {
           inputText = document.getElementById("textarea1").value;
           var payload = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -70,7 +74,23 @@
               // outputText = data;
             });
           // document.getElementById("output").innerHTML = outputText;
-      }
+          var input_list = ["Test", "sentence", "."];
+          f2(input_list)
+        }
+
+        function f2(input_list) {
+          text = ""
+          for (let i = 0; i < input_list.length; i++) {
+            if (input_list[i].length > 0) {
+            text += "<span id=\"" + i + "\" onclick=\"f3(" + i + ")\"" + ">" + input_list[i] + "</span>";
+            }
+          }
+          document.getElementById("static-input").innerHTML = text;
+        }
+
+        function f3() {
+          // Function
+        }
         </script>
     </body>
 </html>
