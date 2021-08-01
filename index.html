@@ -43,6 +43,7 @@
       
       <br>
         <script>
+        var output_list;
         function f1() {
           inputText = document.getElementById("textarea1").value;
           var payload = {
@@ -88,7 +89,7 @@
           text = ""
           for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
-            text += "<span id=\"" + i + "\" onclick=\"f3(" + i + ")\"" + ">" + input_list[i] + " " + "</span>";
+            text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + ">" + input_list[i] + " " + "</span>";
             }
           }
           document.getElementById("static-input").innerHTML = text;
