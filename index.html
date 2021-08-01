@@ -68,6 +68,9 @@
               console.log("data: ", data);
               input_list = data[0];
               console.log(input_list.length)
+              for (let i = 0; i < input_list.length; i++) {
+                console.log(input_list[i])
+              }
               output_list = data[1];
               
               // document.getElementById("output").innerHTML = data;
@@ -81,7 +84,7 @@
 
         function f2(input_list) {
           text = ""
-          for (let i = 0; i < 32; i++) {
+          for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
             text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + ">" + input_list[i] + " " + "</span>";
             }
