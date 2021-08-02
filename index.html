@@ -92,10 +92,15 @@
           text2 = "";
           if (output_list[i].length > 0) {
             for (let j = 0; j < output_list[i].length; j++) {
-              text2 += "<button type=\"button\" onclick=\"f4(this.innerHTML, " + i + ")\">" + output_list[i][j] + "</button>"
+              text2 += "<button id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML, " + i + ")\">" + output_list[i][j] + "</button>"
             }
           }
           document.getElementById("choices").innerHTML = text2;
+          window.addEventListener('keydown', (event) => {
+            if (event.key === '1') {
+              document.getElementById(i).innerHTML = document.getElementById("b1").innerHTML + " ";
+            }
+          })
         }
 
         function f4(text, i) {
