@@ -89,37 +89,38 @@
           document.getElementById("static-input").innerHTML = text;
         }
 
-        function onKeyDown(event, output_list, i) {
+        function onKeyDown(event, length, i) {
             console.log("ENTERED ONKEYDOWN")
             console.log("output_list[i].length:", output_list[i].length)
             console.log("i:", i)
-            if (event.key === '1' && output_list[i].length > 0) {
+            if (event.key === '1' && length > 0) {
               console.log("PRESSED 1")
               document.getElementById(i).innerHTML = document.getElementById("b0").innerHTML + " ";
             }
-            if (event.key === '2' && output_list[i].length > 1) {
+            if (event.key === '2' && length > 1) {
               document.getElementById(i).innerHTML = document.getElementById("b1").innerHTML + " ";
             }
-            if (event.key === '3' && output_list[i].length > 1) {
+            if (event.key === '3' && length > 2) {
               document.getElementById(i).innerHTML = document.getElementById("b2").innerHTML + " ";
             }
-            if (event.key === '4' && output_list[i].length > 1) {
+            if (event.key === '4' && length > 3) {
               document.getElementById(i).innerHTML = document.getElementById("b3").innerHTML + " ";
             }
-            if (event.key === '5' && output_list[i].length > 1) {
+            if (event.key === '5' && length > 4) {
               document.getElementById(i).innerHTML = document.getElementById("b4").innerHTML + " ";
             }
           }
 
         function f3(i) {
           text2 = "";
+          length = output_list[i].length;
           if (output_list[i].length > 0) {
             for (let j = 0; j < output_list[i].length; j++) {
               text2 += "<button id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML, " + i + ")\">" + output_list[i][j] + "</button>"
             }
           }
           document.getElementById("choices").innerHTML = text2;
-          window.addEventListener('keydown', onKeyDown(output_list, i));
+          window.addEventListener('keydown', onKeyDown(length, i));
         }
 
         function f4(text, i) {
