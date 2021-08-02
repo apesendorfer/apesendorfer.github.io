@@ -88,9 +88,10 @@
           document.getElementById("static-input").innerHTML = text;
         }
 
-        function onKeyDown(event, i) {
+        function onKeyDown(event, output_list, i) {
             console.log("ENTERED ONKEYDOWN")
-            console.log("output_list[i].length", output_list[i].length)
+            console.log("output_list[i].length:", output_list[i].length)
+            console.log("i:", i)
             if (event.key === '1' && output_list[i].length > 0) {
               console.log("PRESSED 1")
               document.getElementById(i).innerHTML = document.getElementById("b0").innerHTML + " ";
@@ -117,7 +118,7 @@
             }
           }
           document.getElementById("choices").innerHTML = text2;
-          window.addEventListener('keydown', onKeyDown(i));
+          window.addEventListener('keydown', onKeyDown(output_list, i));
         }
 
         function f4(text, i) {
