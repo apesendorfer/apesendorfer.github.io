@@ -88,7 +88,7 @@
           document.getElementById("static-input").innerHTML = text;
         }
 
-        function onKeyDown(event) {
+        function onKeyDown(event, i) {
             if (event.key === '1' && output_list[i].length > 0) {
               document.getElementById(i).innerHTML = document.getElementById("b0").innerHTML + " ";
             }
@@ -114,7 +114,7 @@
             }
           }
           document.getElementById("choices").innerHTML = text2;
-          window.addEventListener('keydown', onKeyDown);
+          window.addEventListener('keydown', onKeyDown(i));
         }
 
         function f4(text, i) {
