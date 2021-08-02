@@ -90,6 +90,7 @@
 
         function onKeyDown(event, i) {
             console.log("ENTERED ONKEYDOWN")
+            console.log("output_list[i].length", output_list[i].length)
             if (event.key === '1' && output_list[i].length > 0) {
               console.log("PRESSED 1")
               document.getElementById(i).innerHTML = document.getElementById("b0").innerHTML + " ";
