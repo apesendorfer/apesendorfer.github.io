@@ -99,18 +99,23 @@
           window.addEventListener('keydown', (event) => {
             if (event.key === '1' && output_list[i].length > 0) {
               document.getElementById(i).innerHTML = document.getElementById("b0").innerHTML + " ";
+              return;
             }
             if (event.key === '2' && output_list[i].length > 1) {
               document.getElementById(i).innerHTML = document.getElementById("b1").innerHTML + " ";
+              return;
             }
             if (event.key === '3' && output_list[i].length > 2) {
               document.getElementById(i).innerHTML = document.getElementById("b2").innerHTML + " ";
+              return;
             }
             if (event.key === '4' && output_list[i].length > 3) {
               document.getElementById(i).innerHTML = document.getElementById("b3").innerHTML + " ";
+              return;
             }
             if (event.key === '5' && output_list[i].length > 4) {
               document.getElementById(i).innerHTML = document.getElementById("b4").innerHTML + " ";
+              return;
             }
           })
         }
