@@ -102,6 +102,7 @@
       <br>
         <script>
         var output_list;
+        var input_list;
         var sent_length;
         function f1() {
           inputText = document.getElementById("textarea1").value;
@@ -118,7 +119,7 @@
           };
           const Url = "https://i7a0fn1zof.execute-api.us-east-2.amazonaws.com/test/suggestions";
           var outputText = "";
-          var input_list;
+          // var input_list;
           fetch(Url, payload)
             .then(function (response) {
               return response.json()
