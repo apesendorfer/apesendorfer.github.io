@@ -105,6 +105,7 @@
         var input_list;
         var sent_length;
         var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", ")", "]", "}"]
+        var inputText;
         function f1() {
           inputText = document.getElementById("textarea1").value;
           var payload = {
@@ -215,11 +216,12 @@
         }
 
         function revert() {
-          str = "";
-          for (let i = 0; i < sent_length; i++) {
-            str += input_list[i] + " ";
-          }
-          document.getElementById("textarea1").value = str;
+          // str = "";
+          // for (let i = 0; i < sent_length; i++) {
+          //   str += input_list[i] + " ";
+          // }
+          // document.getElementById("textarea1").value = str;
+          document.getElementById("textarea1").value = inputText;
         }
         </script>
 	<footer style = "margin: auto; width: 20%; font-size: 12px;">
