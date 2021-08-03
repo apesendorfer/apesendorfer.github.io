@@ -100,6 +100,7 @@
       <br>
         <script>
         var output_list;
+        var sent_length;
         function f1() {
           inputText = document.getElementById("textarea1").value;
           var payload = {
@@ -124,6 +125,7 @@
               // console.log("data: ", data);
               input_list = data[0].slice(1, data[0].length - 1);
               output_list = data[1].slice(1, data[1].length - 1);
+              sent_length = input_list.length;
               f2(input_list)
               // document.getElementById("output").innerHTML = data;
             });
