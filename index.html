@@ -111,8 +111,8 @@
             })
             .then(function (data) {
               // console.log("data: ", data);
-              input_list = data[0].slice(1, data[0].length);
-              output_list = data[1].slice(1, data[1].length);
+              input_list = data[0].slice(1, data[0].length - 1);
+              output_list = data[1].slice(1, data[1].length - 1);
               f2(input_list)
               // document.getElementById("output").innerHTML = data;
             });
