@@ -144,7 +144,7 @@
           text = ""
           for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
-            text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + " onmouseout=\"f5()\">" + input_list[i] + " " + "</span>";
+            text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + " onmouseout=\"f5(this)\">" + input_list[i] + " " + "</span>";
             }
           }
           document.getElementById("static-input").innerHTML = text;
@@ -173,6 +173,7 @@
         }
 
         function f3(i) {
+          document.getElementById(i).style.fontWeight = "bold";
           text2 = "";
           length = output_list[i].length;
           num = i;
@@ -190,6 +191,7 @@
         }
 
         function f5() {
+          this.style.fontWeight = "normal"
           console.log("REMOVE EVENTLISTENER")
           window.removeEventListener('keydown', EventHandler);
         }
