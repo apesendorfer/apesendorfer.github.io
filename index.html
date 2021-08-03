@@ -85,6 +85,10 @@
 
             <div id="choices"></div>
 
+            <div id="tools">
+              <button type="button" onclick="f6()">Change</button>
+            </div>
+
             <!-- <div class="out" id="output">Output Text Here</div> -->
           </div>
         </section>
@@ -179,6 +183,10 @@
         function f5() {
           console.log("REMOVE EVENTLISTENER")
           window.removeEventListener('keydown', EventHandler);
+        }
+
+        function f6() {
+          document.getElementById("textarea1").value = document.getElementById("static-input").innerHTML;
         }
         </script>
     </body>
