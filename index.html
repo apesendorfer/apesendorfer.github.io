@@ -173,7 +173,9 @@
         }
 
         function f3(i) {
-          document.getElementById(i).style.fontWeight = "bold";
+          var element = document.getElementById(i)
+          element.style.fontWeight = "bold";
+          element.style.color = "magenta"
           text2 = "";
           length = output_list[i].length;
           num = i;
@@ -192,6 +194,7 @@
 
         function f5(object) {
           object.style.fontWeight = "normal"
+          object.style.color = "black"
           console.log("REMOVE EVENTLISTENER")
           window.removeEventListener('keydown', EventHandler);
         }
