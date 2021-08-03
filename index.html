@@ -100,7 +100,6 @@
       <br>
         <script>
         var output_list;
-        var sent_length;
         function f1() {
           inputText = document.getElementById("textarea1").value;
           var payload = {
@@ -125,7 +124,6 @@
               // console.log("data: ", data);
               input_list = data[0].slice(1, data[0].length - 1);
               output_list = data[1].slice(1, data[1].length - 1);
-              sent_length = input_list.length;
               f2(input_list)
               // document.getElementById("output").innerHTML = data;
             });
@@ -191,14 +189,10 @@
         }
 
         function f6() {
-          str = "";
-          for (let i = 0; i < sent_length; i++) {
-            str += document.getElementById(i).innerHTML + " ";
-          }
-          document.getElementById("static-input") = str;
+          document.getElementById("textarea1").value = document.getElementById("static-input").value;
         }
         </script>
-	<footer style = "margin: auto; font-size: 12px;">
+	<footer style = "margin: auto; width: 100%; font-size: 12px;">
   		<p><a href="https://github.com/apesendorfer/finesse">Built with love</a> by Alex & Ben</p>
 	</footer>
     </body>
