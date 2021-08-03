@@ -90,7 +90,8 @@
             <div id="choices"></div>
 
             <div id="tools">
-              <button type="button" onclick="f6()">Change</button>
+              <button type="button" onclick="change()">Change</button>
+              <button type="button" onclick="revert()">Revert</button>
             </div>
 
             <!-- <div class="out" id="output">Output Text Here</div> -->
@@ -191,10 +192,18 @@
           window.removeEventListener('keydown', EventHandler);
         }
 
-        function f6() {
+        function change() {
           str = "";
           for (let i = 0; i < sent_length; i++) {
             str += document.getElementById(i).innerHTML;
+          }
+          document.getElementById("textarea1").value = str;
+        }
+
+        function revert() {
+          str = "";
+          for (let i = 0; i < sent_length; i++) {
+            str += input_list[i];
           }
           document.getElementById("textarea1").value = str;
         }
