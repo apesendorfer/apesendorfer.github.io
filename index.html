@@ -190,7 +190,7 @@
           document.getElementById(i).innerHTML = text + " ";
         }
 
-        function f5() {
+        function f5(this) {
           this.style.fontWeight = "normal"
           console.log("REMOVE EVENTLISTENER")
           window.removeEventListener('keydown', EventHandler);
