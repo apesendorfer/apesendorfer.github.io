@@ -73,7 +73,7 @@
           <div>
             <div class="row">
               <div class="col">
-                <button type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Finesse">Finesse it</button>
+                <button id="finesseButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Finesse">Finesse it</button>
 
               </div>
               
@@ -102,6 +102,7 @@
         var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", ")", "]", "}"]
         var inputText;
         function f1() {
+          document.getElementById("finesseButton").disabled = true;
           inputText = document.getElementById("textarea1").value;
           var payload = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -144,6 +145,7 @@
             }
           }
           document.getElementById("static-input").innerHTML = text;
+          document.getElementById("finesseButton").disabled = false;
         }
         // EventHandler takes inputs: event, length, i
         var EventHandler = function() {
