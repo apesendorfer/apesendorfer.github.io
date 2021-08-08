@@ -35,7 +35,50 @@
     font-size: 16px;
     line-height: 10px;
     padding: 8px 20px;
+    cursor: pointer;
   }
+  .startButton {
+	  margin-bottom: 0px;
+    width: fit-content;
+    background: rgba(253, 158, 70, 0.7);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 10px;
+    padding: 8px 20px;
+    cursor: pointer;
+	      animation: bgColor 10s infinite linear;
+
+}
+@keyframes bgColor {
+  12.5% {
+    background-color: #FFDDBD;
+  }
+  25% {
+    background-color: #FFAC60;
+  }
+  37.5% {
+    background-color: #FFC086;
+  }
+  50% {
+    background-color: #FF9839;
+  }
+  62.5% {
+    background-color: #FFC086;
+  }
+  75% {
+    background-color: #FFAC60;
+  }
+  87.5% {
+    background-color: #FFDDBD;
+  }
+
+}
   textarea {
     background: #E5E5E5;
     border: 1px solid #000000;
