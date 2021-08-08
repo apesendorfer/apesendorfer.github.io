@@ -24,7 +24,7 @@ body {
   button {
     margin-bottom: 0px;
     float: left;
-    width: 8%;
+    width: fit-content;
     background: rgba(253, 158, 70, 0.7);
     border: 1px solid #000000;
     box-sizing: border-box;
@@ -40,7 +40,7 @@ body {
   }
   .loader {
     float: left;
-    width: 3%';
+    width: fit-content;
     padding: 0 20px;
   }
 	   
