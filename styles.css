@@ -109,12 +109,3 @@ body {
     background-color: #ebe6ff;
   }
 }
-
-.topRow {
-    display: inline;
-}
-
-.startButton {
-    display: inline-block; 
-    margin-right: 10px;
-}
