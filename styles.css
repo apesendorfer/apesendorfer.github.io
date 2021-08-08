@@ -59,7 +59,8 @@ body {
  * ==============================================
  */
 .dot-flashing {
-  display: none;
+    display: inline-block;
+  /* display: none; */
   position: relative;
   width: 10px;
   height: 10px;
@@ -107,4 +108,13 @@ body {
   100% {
     background-color: #ebe6ff;
   }
+}
+
+.topRow {
+    display: inline;
+}
+
+.startButton {
+    display: inline-block; 
+    margin-right: 10px;
 }
