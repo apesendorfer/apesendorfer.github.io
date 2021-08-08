@@ -35,7 +35,6 @@ body {
     font-size: 16px;
     line-height: 10px;
     padding: 8px 20px;
-    float:left;
   }
 
 	  
@@ -60,7 +59,6 @@ body {
  * ==============================================
  */
 .dot-flashing {
-  float:left;
   display: none;
   position: relative;
   width: 10px;
