@@ -1,4 +1,4 @@
-body {
+  body {
     font-family: Roboto;
     max-width: 100%;
     overflow-x: hidden;
@@ -23,7 +23,6 @@ body {
 	  }
   button {
     margin-bottom: 0px;
-    float: left;
     width: fit-content;
     background: rgba(253, 158, 70, 0.7);
     border: 1px solid #000000;
@@ -36,16 +35,7 @@ body {
     font-size: 16px;
     line-height: 10px;
     padding: 8px 20px;
-    cursor: pointer;
   }
-  .loader {
-    float: left;
-    width: fit-content;
-    padding: 0 20px;
-  }
-	   
-
-	  
   textarea {
     background: #E5E5E5;
     border: 1px solid #000000;
@@ -55,67 +45,8 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    float: left;
   }
 	    
   .no-outline:focus {
     outline: none;
   }
-
-  /**
- * ==============================================
- * Dot Flashing
- * ==============================================
- */
-  /*
-.dot-flashing {
-  display: none;
-  position: relative;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
-  animation: dotFlashing 1s infinite linear alternate;
-  animation-delay: .5s;
-}
-
-.dot-flashing::before, .dot-flashing::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-}
-
-.dot-flashing::before {
-  left: -15px;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
-  animation: dotFlashing 1s infinite alternate;
-  animation-delay: 0s;
-}
-
-.dot-flashing::after {
-  left: 15px;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
-  animation: dotFlashing 1s infinite alternate;
-  animation-delay: 1s;
-}
-
-@keyframes dotFlashing {
-  0% {
-    background-color: #9880ff;
-  }
-  50%,
-  100% {
-    background-color: #ebe6ff;
-  }
-}
-*/
