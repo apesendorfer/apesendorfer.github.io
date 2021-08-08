@@ -47,7 +47,9 @@
         var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", ")", "]", "}"]
         var inputText;
         function f1() {
-          document.getElementById("finesseButton").disabled = true;
+          element = document.getElementById("finesseButton");
+          element.disabled = true;
+          element.style.animation = "bgColor 10s infinite linear";
           inputText = document.getElementById("textarea1").value;
           var payload = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -90,7 +92,9 @@
             }
           }
           document.getElementById("static-input").innerHTML = text;
-          document.getElementById("finesseButton").disabled = false;
+          element = document.getElementById("finesseButton");
+          element.disabled = false;
+          element.style.animation = "none";
         }
         // EventHandler takes inputs: event, length, i
         var EventHandler = function() {
