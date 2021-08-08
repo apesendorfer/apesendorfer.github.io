@@ -23,7 +23,7 @@ body {
 	  }
   button {
     margin-bottom: 0px;
-    float: "left";
+    float: left;
     width: 8%;
     background: rgba(253, 158, 70, 0.7);
     border: 1px solid #000000;
@@ -39,7 +39,7 @@ body {
     cursor: pointer;
   }
   .loader {
-    float: "left";
+    float: left;
     width: 3%';
     padding: 0 20px;
   }
