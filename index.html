@@ -53,6 +53,64 @@
   .no-outline:focus {
     outline: none;
   }
+
+  /**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dot-flashing {
+  display: none;
+  float: left;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.dot-flashing::before, .dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #9880ff;
+  }
+  50%,
+  100% {
+    background-color: #ebe6ff;
+  }
+}
+
     </style>
     <head>
         <meta charset="utf-8">
@@ -72,7 +130,8 @@
           <div>
             <div class="row">
               <div class="col">
-                <button id="finesseButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Finesse">Finesse it</button>
+                <button style="float: left;" id="finesseButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Finesse">Finesse it</button>
+                <div id="loader" class="dot-flashing"></div>
               </div>
               
             </div>
@@ -101,6 +160,7 @@
         var inputText;
         function f1() {
           document.getElementById("finesseButton").disabled = true;
+          document.getElementById("loader").style.display = "none";
           inputText = document.getElementById("textarea1").value;
           var payload = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -144,6 +204,7 @@
           }
           document.getElementById("static-input").innerHTML = text;
           document.getElementById("finesseButton").disabled = false;
+          document.getElementById("loader").style.display = "block";
         }
         // EventHandler takes inputs: event, length, i
         var EventHandler = function() {
