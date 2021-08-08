@@ -59,9 +59,9 @@ body {
  * Dot Flashing
  * ==============================================
  */
+  /*
 .dot-flashing {
-    display: inline-block;
-  /* display: none; */
+  display: none;
   position: relative;
   width: 10px;
   height: 10px;
@@ -110,3 +110,4 @@ body {
     background-color: #ebe6ff;
   }
 }
+*/
