@@ -159,7 +159,7 @@
         var inputText;
         function f1() {
           document.getElementById("finesseButton").disabled = true;
-          document.getElementById("loader").style.display = "none";
+          document.getElementById("loader").style.display = "block";
           inputText = document.getElementById("textarea1").value;
           var payload = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -203,7 +203,7 @@
           }
           document.getElementById("static-input").innerHTML = text;
           document.getElementById("finesseButton").disabled = false;
-          document.getElementById("loader").style.display = "block";
+          document.getElementById("loader").style.display = "none";
         }
         // EventHandler takes inputs: event, length, i
         var EventHandler = function() {
