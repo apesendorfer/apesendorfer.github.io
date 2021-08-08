@@ -23,7 +23,8 @@ body {
 	  }
   button {
     margin-bottom: 0px;
-    width: fit-content;
+    float: "left";
+    width: 5%;
     background: rgba(253, 158, 70, 0.7);
     border: 1px solid #000000;
     box-sizing: border-box;
@@ -37,6 +38,12 @@ body {
     padding: 8px 20px;
     cursor: pointer;
   }
+  .loader {
+    float: "left";
+    width: 3%';
+    padding: 8px 20px;
+  }
+	   
 
 	  
   textarea {
