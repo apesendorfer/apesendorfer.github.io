@@ -36,6 +36,14 @@
             </div>
             <!-- <div class="out" id="output">Output Text Here</div> -->
           </div>
+	    <div>
+              <h3>How to use Finesse</h3>
+              <div></div>
+              <h3>Why we built Finesse</h3>
+              <div></div>
+              <h3>What's Next?</h3>
+              <div></div>
+          </div>
         </section>
       <br>
       
@@ -128,7 +136,7 @@
           num = i;
           if (output_list[i].length > 0) {
             for (let j = 0; j < output_list[i].length; j++) {
-              text2 += "<button id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML, " + i + ")\">" + output_list[i][j] + "</button>"
+              text2 += "<button style=\"background:#FFCACA;\" id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML, " + i + ")\">" + j + ". " + output_list[i][j] + "</button>"
             }
           }
           document.getElementById("choices").innerHTML = text2;
