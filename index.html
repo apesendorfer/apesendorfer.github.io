@@ -36,7 +36,7 @@
             </div>
             <!-- <div class="out" id="output">Output Text Here</div> -->
           </div>
-	    <div style="margin-top: 100px">
+	    <div style="margin-top: 100px; max-width: 80%;">
               <h3>How to use Finesse</h3>
               <div>Ever been frustrated Googling synonyms? 
 		      Here's your solution. Finesse helps you find the perfect word. Instead of giving rigid, imprecise suggestions like a thesaurus might, Finesse 
@@ -47,11 +47,19 @@
 		  <li>Finesse it. Usually a pretty fast process unless you're the first user in a long time. Never more than 30 seconds.</li>
 		  <li>Mouse over a word to see suggestions!</li>
 		<li>Either click on the suggestion or a number on your keyboard, 1-5, to change the word.</li>
-			    <li>Hit "Change" to push the changes to the text</li>
+			    <li>Hit "Change" to push the changes to the text.</li>
 		</ol>
+		    <div>Here are some fun examples: </div>
+		    <ul>
+			  <li>This sentence is very vague.</li>
+			  <li>After spending years developing an understanding of the nature of yearning, the narrator finds a fluid, quiet peace.</li>
+			  <li>Awesome sauce!</li>
+			</ul>
               <h3>What's Next?</h3>
-              <div>Finesse is a foundation. </div>
-		<div> Want to write like your favorite author? </div>
+              <div>Finesse is a foundation. We want changing words to change the world: not just finding synonyms, but being more conscious of how we use words. 
+		    Racial and gender biases emerge from our language. Tools like Finesse can detect those biases by making the same connections between words that
+		    we have. </div>
+		<div> Want to write like your favorite author? You can! Retrain Finesse on any text you want through our GitHub.</div>
           </div>
         </section>
       <br>
@@ -61,7 +69,7 @@
         var output_list;
         var input_list;
         var sent_length;
-        var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", ")", "]", "}"]
+        var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", "---", "—", ")", "]", "}"]
         var inputText;
         function f1() {
           element = document.getElementById("finesseButton");
