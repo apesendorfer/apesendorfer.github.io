@@ -111,19 +111,19 @@
           console.log("i:", num)
           if (event.key === '1' && length > 0) {
             console.log("PRESSED 1")
-            document.getElementById(num).innerHTML = document.getElementById("b0").innerHTML + " ";
+            document.getElementById(num).innerHTML = document.getElementById("b0").innerHTML.substring(3) + " ";
           }
           if (event.key === '2' && length > 1) {
-            document.getElementById(num).innerHTML = document.getElementById("b1").innerHTML + " ";
+            document.getElementById(num).innerHTML = document.getElementById("b1").innerHTML.substring(3) + " ";
           }
           if (event.key === '3' && length > 2) {
-            document.getElementById(num).innerHTML = document.getElementById("b2").innerHTML + " ";
+            document.getElementById(num).innerHTML = document.getElementById("b2").innerHTML.substring(3) + " ";
           }
           if (event.key === '4' && length > 3) {
-            document.getElementById(num).innerHTML = document.getElementById("b3").innerHTML + " ";
+            document.getElementById(num).innerHTML = document.getElementById("b3").innerHTML.substring(3) + " ";
           }
           if (event.key === '5' && length > 4) {
-            document.getElementById(num).innerHTML = document.getElementById("b4").innerHTML + " ";
+            document.getElementById(num).innerHTML = document.getElementById("b4").innerHTML.substring(3) + " ";
           }
         }
 
@@ -136,7 +136,7 @@
           num = i;
           if (output_list[i].length > 0) {
             for (let j = 0; j < output_list[i].length; j++) {
-              text2 += "<button style=\"background:#FFCACA;\" id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML, " + i + ")\">" + j + ". " + output_list[i][j] + "</button>"
+              text2 += "<button style=\"background:#E4B1FB;\" id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML, " + i + ")\">" + (j+1) + ". " + output_list[i][j] + "</button>"
             }
           }
           document.getElementById("choices").innerHTML = text2;
