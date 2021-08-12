@@ -21,6 +21,9 @@
 	 font-style: normal;
 	  font-weight: normal;
 	  }
+  .triangle {
+    background: #F4BFA1;
+  }
   button {
     margin-bottom: 0px;
     width: fit-content;
