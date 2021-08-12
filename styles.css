@@ -22,14 +22,14 @@
 	  font-weight: normal;
 	  }
   .triangle {
-	background: transparent;
+	/* background: transparent;
 	  width: 0;
 	height: 0;
 	border: 0 solid transparent;
 	border-right-width: 70px;
 	border-left-width: 70px;
 	border-bottom: 69px solid #F4BFA1;
-	transform: rotate(-180deg);
+	transform: rotate(-180deg); */
 
   }
   button {
