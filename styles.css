@@ -6,6 +6,8 @@
     font-weight: normal;
     font-size: 16px;
     position: relative;
+  	left: 50px;
+	  top: 50px;
   }
   h1 {
 	 font-size: 60px;
@@ -19,22 +21,7 @@
 	 font-style: normal;
 	  font-weight: normal;
 	  }
-  .descrip:not(.startButton) {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    justify-content: center;
-  }
-  .triangleImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transform: rotate(-180deg);
-  }
   .triangle {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 	/* background: transparent;
 	  width: 0;
 	height: 0;
@@ -43,20 +30,10 @@
 	border-left-width: 70px;
 	border-bottom: 69px solid #F4BFA1;
 	transform: rotate(-180deg); */
-  }
-  .info {
-    scroll-margin: 10px;
-    scroll-padding: 10px;
-  }
-  .startButton {
-    margin-left: 0px;
-    justify-content: left;
-  }
-  .container {
-    width: 100%;
+
   }
   button {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     width: fit-content;
     background: rgba(253, 158, 70, 0.7);
     border: 1px solid #000000;
@@ -72,8 +49,7 @@
     cursor: pointer;
   }
   .startButton {
-    text-align:left;
-	  margin-bottom: 10px;
+	  margin-bottom: 0px;
     width: fit-content;
     background: rgba(253, 158, 70, 0.7);
     border: 1px solid #000000;
@@ -127,8 +103,4 @@
 	    
   .no-outline:focus {
     outline: none;
-  }
-
-  footer {
-    text-align: center;
   }
