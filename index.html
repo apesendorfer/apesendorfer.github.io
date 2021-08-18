@@ -11,23 +11,16 @@
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     </head>
-
     <body style="background: #F9E4D9;">
-        <section class="">
-        <h1 id = "header">Finesse</h1>
-        <h3>A Literary Thesaurus, Powered by AI</h3>
-          <div>
-            <div class="row">
-              <div class="col">
-                <button id="finesseButton" class="startButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Finesse">Finesse it</button>
-              </div>
-              
-            </div>
-          </div>
+      <div class="container">
+        <div class="descrip">
+          <h1 id = "header">Finesse</h1>
+          <h3 class="center">A Literary Thesaurus, Powered by AI</h3>
+          <button id="finesseButton" class="startButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Run the tool">Finesse it</button>
           <br>
-            <div>
-                <textarea  id="textarea1" name="name" rows="15" cols="100" placeholder="Your text here "></textarea>
-            </div>
+            <div style="max-width:100%">
+                <textarea class="center" id="textarea1" name="name" rows="15" cols="100" placeholder="Your text here "></textarea>
+              </div>
             <div id="static-input" style = "max-width: 80%;"></div>
             <div id="choices"></div>
             <div id="tools" style="margin-top: 10px">
@@ -35,9 +28,13 @@
               <button type="button" onclick="revert()">Revert</button>
             </div>
             <!-- <div class="out" id="output">Output Text Here</div> -->
-          </div>
-	    <button id="scroller" class="triangle" style="margin: auto; width: 3%; margin-bottom: 200px;" 
+        </div>
+      </div>
+      <img id="scroller" class="triangleImg" src="triangle.png" style="margin: auto; width: 3%;" 
+      onclick="document.getElementById('info').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })">
+	    <!--<button id="scroller" class="triangle" style="margin: auto; width: 3%; margin-bottom: 200px;" 
 		    onclick="document.getElementById('info').scrollIntoView({ behavior: 'smooth', block: 'center' })"></button>
+      -->
 	    <div style="max-width: 80%;">
 		    <h3 id="info">How to use Finesse</h3>
               <div>Ever been frustrated Googling synonyms? 
@@ -66,25 +63,24 @@
 			  <li>Want to support us? We'd love for you to donate to the <a href="https://cli.org/donate-2/" target="_blank"> Children's Literacy Initiative</a>.</li>
 			  <li>Have any feedback? Reach out at guzovsky [@] princeton.edu.</li>
 			</ul>
-		
-	
-          </div>
-	  
-        </section>
+      </div>
+      <!--<div style="margin-bottom: 200px;"></div>-->
       <br>
-      
       <br>
+      </body>
+      </html>
         <script>
         var output_list;
         var input_list;
         var sent_length;
-        var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", "---", "—", ")", "]", "}"]
+        var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", "---", "—", ")", "]", "}", "'", "\""]
         var inputText;
         function f1() {
           element = document.getElementById("finesseButton");
           element.disabled = true;
           element.style.animation = "bgColor 10s infinite linear";
           inputText = document.getElementById("textarea1").value;
+          inputText = inputText.replaceAll("/n", " /n ")
           var payload = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
@@ -122,7 +118,12 @@
           text = ""
           for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
-            text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + " onmouseout=\"f5(this)\">" + input_list[i] + " " + "</span>";
+              if (input_list[i] == " /n ") {
+                text += "<br>"
+              }
+              else {
+                text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + " onmouseout=\"f5(this)\">" + input_list[i] + " " + "</span>";
+              }
             }
           }
           document.getElementById("static-input").innerHTML = text;
