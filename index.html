@@ -116,7 +116,7 @@
         }
 
         function f2(input_list) {
-          text = "<span class='center'>"
+          text = "<div class='container'><div class='descrip'>"
           for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
               if (input_list[i] == "NewLineMarker") {
@@ -127,7 +127,7 @@
               }
             }
           }
-          text += "</span>"
+          text += "</div></div>"
           document.getElementById("static-input").innerHTML = text;
           element = document.getElementById("finesseButton");
           element.disabled = false;
