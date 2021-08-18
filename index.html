@@ -80,7 +80,8 @@
           element.disabled = true;
           element.style.animation = "bgColor 10s infinite linear";
           inputText = document.getElementById("textarea1").value;
-          inputText = inputText.replaceAll("/n", " /n ")
+          inputText = inputText.replaceAll("/n", " /n ");
+          console.log(inputText);
           var payload = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
