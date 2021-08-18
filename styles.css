@@ -22,8 +22,8 @@
   .descrip:not(.startButton) {
     margin-right: auto;
     margin-left: auto;
-    text-align: center;
-    justify-content: center;
+    text-align: left;
+    justify-content: left;
   }
   .triangleImg {
     display: block;
