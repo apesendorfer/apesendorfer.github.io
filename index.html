@@ -18,10 +18,11 @@
           <h3 class="center">A Literary Thesaurus, Powered by AI</h3>
           <button id="finesseButton" class="startButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Run the tool">Finesse it</button>
           <br>
-            <div style="max-width:100%">
+            <div class="item">
                 <textarea class="center" id="textarea1" name="name" rows="15" cols="100" placeholder="Your text here "></textarea>
-              </div>
-            <div id="static-input" style = "max-width: 80%;"></div>
+                <span class="caption" id="static-input" style = "max-width: 80%;"></span>
+            </div>
+            
             <div id="choices"></div>
             <div id="tools" style="margin-top: 10px">
               <button type="button" onclick="change()">Change</button>
@@ -116,7 +117,7 @@
         }
 
         function f2(input_list) {
-          text = "<div class='container'><div class='descrip'>"
+          text = "<div class='container2'><div class='descrip2'>"
           for (let i = 0; i < input_list.length; i++) {
             if (input_list[i].length > 0) {
               if (input_list[i] == "NewLineMarker") {
