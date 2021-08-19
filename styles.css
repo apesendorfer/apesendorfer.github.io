@@ -144,7 +144,7 @@
     margin-right: auto;
     vertical-align: top;
     display: inline-block;
-    text-align: left;
+    /*text-align: left;*/
     justify-content: left;
   }
 
