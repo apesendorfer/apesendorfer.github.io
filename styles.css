@@ -129,6 +129,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+    width: 100%;
   }
 	    
   .no-outline:focus {
@@ -142,10 +143,12 @@
   div.item {
     margin-left: auto;
     margin-right: auto;
-    vertical-align: top;
-    display: inline-block;
+    /*vertical-align: top;
+    display: inline-block;/*
     /*text-align: left;*/
-    justify-content: left;
+    width: 65%;
+    margin: 0 auto;
+    display: block;
   }
 
   .caption {
