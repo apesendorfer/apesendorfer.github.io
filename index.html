@@ -20,6 +20,7 @@
           <br>
             <div class="item">
                 <textarea class="center" id="textarea1" name="name" rows="15" cols="100" placeholder="Your text here "></textarea>
+                <br>
                 <span class="caption" id="static-input" style = "max-width: 80%;"></span>
             </div>
             
@@ -128,7 +129,7 @@
               }
             }
           }
-          text += "</div></div>"
+          text += "</div></div><br>"
           document.getElementById("static-input").innerHTML = text;
           element = document.getElementById("finesseButton");
           element.disabled = false;
