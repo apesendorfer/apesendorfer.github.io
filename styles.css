@@ -54,10 +54,6 @@
     scroll-margin: 10px;
     scroll-padding: 10px;
   }
-  .startButton {
-    margin-left: 0px;
-    justify-content: left;
-  }
   .container {
     width: 100%;
   }
@@ -78,6 +74,9 @@
     cursor: pointer;
   }
   .startButton {
+    /*display: block;*/
+    margin-left: 0px;
+    justify-content: left;
     text-align:left;
 	  margin-bottom: 10px;
     width: fit-content;
@@ -153,4 +152,11 @@
 
   .caption {
     display: block;
-}
+  }
+  .tools {
+    display: block;
+    margin-top: 10px;
+  }
+  .toolButton {
+    display: inline-block;
+  }
