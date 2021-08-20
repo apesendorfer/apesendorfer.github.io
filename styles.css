@@ -1,24 +1,31 @@
   body {
-    font-family: Roboto;
+    color: #444444;
+    font-family: 'Andada Pro', serif;
     max-width: 100%;
     overflow-x: hidden;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
     position: relative;
   }
   h1 {
-	 font-size: 60px;
+    color: black;
+    margin-top: 60px;
+  font-family: 'Inter', sans-serif;
+	 font-size: 80px;
 	 line-height: 10px;
 	 font-style: normal;
 	  font-weight: normal;
 	}
 	h3 {
-	 font-size: 22px;
+	 font-size: 32px;
 	 line-height: 10px;
 	 font-style: normal;
 	  font-weight: normal;
 	  }
+  .toph3 {
+    color: black;
+  }
   .descrip:not(.startButton) {
     margin-right: auto;
     margin-left: auto;
@@ -60,12 +67,12 @@
   button {
     margin-bottom: 10px;
     width: fit-content;
-    background: rgba(253, 158, 70, 0.7);
+    background: #6890C6;
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
-    font-family: Roboto;
+    font-family: 'Andada Pro', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -85,7 +92,7 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
-    font-family: Roboto;
+    font-family: 'Andada Pro', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -97,38 +104,42 @@
 }
 @keyframes bgColor {
   12.5% {
-    background-color: #FFDDBD;
+    background-color: rgb(145, 236, 252);
   }
   25% {
-    background-color: #FFAC60;
+    background-color: #60efff;
   }
   37.5% {
-    background-color: #FFC086;
+    background-color: #93cbfc;
   }
   50% {
-    background-color: #FF9839;
+    background-color: #39c4ff;
   }
   62.5% {
-    background-color: #FFC086;
+    background-color: #7dd6fc;
   }
   75% {
-    background-color: #FFAC60;
+    background-color: hsl(191, 100%, 77%);
   }
   87.5% {
-    background-color: #FFDDBD;
+    background-color: #9bfffd;
   }
 
 }
   textarea {
-    background: #E5E5E5;
+    background: #E9F2FD;
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Roboto;
+    font-family: 'Andada Pro', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     width: 100%;
+    resize: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
 	    
   .no-outline:focus {
@@ -159,4 +170,58 @@
   }
   .toolButton {
     display: inline-block;
+  }
+
+  a.button1 {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid black;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Andada Pro', serif;
+    font-weight:300;
+    color:black;
+    text-align:center;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  a.button1:hover {
+  color:#FFFFFF;
+  background-color:black;
+  }
+  @media all and (max-width:30em) {
+    a.button1{
+      display:block;
+      margin:0.4em auto;
+    }
+  }
+  .aboutHeader {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .inner {
+    margin: auto;
+    width: 90%
+  }
+  .outer {
+    display: block;
+    width: 100%;
+  }
+  .index {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .body2 {
+    color: black;
+    font-family: 'Andada Pro', serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    position: relative;
   }
