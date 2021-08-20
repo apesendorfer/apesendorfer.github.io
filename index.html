@@ -16,18 +16,19 @@
         <div class="descrip">
           <h1 id = "header">Finesse</h1>
           <h3>A Literary Thesaurus, Powered by AI</h3>
+          <button id="finesseButton" class="startButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Run the tool">Finesse it</button>
+          <br>
             <div class="item">
-                <button id="finesseButton" class="startButton" type="button" onclick="f1()" data-toggle="tooltip" data-placement="top" title="Run the tool">Finesse it</button>
                 <textarea id="textarea1" name="name" rows="15" cols="100" placeholder="Your text here "></textarea>
                 <br>
                 <span class="caption" id="static-input"></span>
-                <div class="tools">
-                  <button type="button" onclick="change()">Change</button>
-                  <button type="button" onclick="revert()">Revert</button>
-                </div>
             </div>
             
-            
+            <div id="choices"></div>
+            <div id="tools" style="margin-top: 10px">
+              <button type="button" onclick="change()">Change</button>
+              <button type="button" onclick="revert()">Revert</button>
+            </div>
             <!-- <div class="out" id="output">Output Text Here</div> -->
         </div>
       </div>
