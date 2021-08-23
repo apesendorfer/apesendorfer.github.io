@@ -48,7 +48,7 @@ function f2(input_list) {
     for (let i = 0; i < input_list.length; i++) {
         if (input_list[i].length > 0) {
             if (input_list[i] == "NewLineMarker") {
-                text += "<br>"
+                text += "<br><span id=\"" + i + "\"></span>";
             }
             else {
                 text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + " onmouseout=\"f5(this)\">" + input_list[i] + " " + "</span>";
