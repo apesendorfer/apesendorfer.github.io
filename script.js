@@ -120,6 +120,7 @@ function change() {
             var nextWord = document.getElementById(i + 1).innerHTML;
             console.log(nextWord);
             if (punctuation.includes(nextWord.slice(0, nextWord.length - 1))) {
+                console.log(nextWord);
                 str += currentWord.slice(0, currentWord.length - 1);
             }
             else {
