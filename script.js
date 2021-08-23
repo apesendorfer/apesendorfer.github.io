@@ -63,9 +63,9 @@ function f2(input_list) {
 }
 // EventHandler takes inputs: event, length, i
 var EventHandler = function() {
-    console.log("ENTERED ONKEYDOWN")
-    console.log("output_list[i].length:", length)
-    console.log("i:", num)
+    // console.log("ENTERED ONKEYDOWN")
+    // console.log("output_list[i].length:", length)
+    // console.log("i:", num)
     if (event.key === '1' && length > 0) {
         // console.log("PRESSED 1")
         document.getElementById(num).innerHTML = document.getElementById("b0").innerHTML.substring(3) + " ";
@@ -107,7 +107,7 @@ function f4(text, i) {
 function f5(object) {
     object.style.fontWeight = "normal"
     object.style.color = "black"
-    console.log("REMOVE EVENTLISTENER")
+    // console.log("REMOVE EVENTLISTENER")
     window.removeEventListener('keydown', EventHandler);
 }
 
