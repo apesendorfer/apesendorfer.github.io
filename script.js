@@ -1,7 +1,8 @@
+console.log("startup");
 var output_list;
 var input_list;
 var sent_length;
-var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", "---", "—", ")", "]", "}", "'", "\"", "n't", "'s"];
+var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", "---", "—", ")", "]", "}", "'", "\"", "n't", "'s", "'d", "'ll"];
 var inputText;
 function f1() {
     element = document.getElementById("finesseButton");
@@ -23,25 +24,17 @@ function f1() {
     
     };
     const Url = "https://i7a0fn1zof.execute-api.us-east-2.amazonaws.com/test/suggestions";
-    var outputText = "";
     // var input_list;
     fetch(Url, payload)
     .then(function (response) {
         return response.json()
     })
     .then(function (data) {
-        // console.log("data: ", data);
         input_list = data[0].slice(1, data[0].length - 1);
         output_list = data[1].slice(1, data[1].length - 1);
         sent_length = input_list.length;
         f2(input_list)
-        // document.getElementById("output").innerHTML = data;
     });
-    // document.getElementById("output").innerHTML = outputText;
-    // var input_list = ["", "Test", "sentence", "."];
-    
-    
-    
 }
 
 function f2(input_list) {
