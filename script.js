@@ -114,19 +114,20 @@ function f5(object) {
 function change() {
     str = "";
     for (let i = 0; i < sent_length; i++) {
-    if (i + 1 < sent_length) {
-        var currentWord = document.getElementById(i).innerHTML;
-        var nextWord = document.getElementById(i + 1).innerHTML;
-        if (punctuation.includes(nextWord.slice(0, nextWord.length - 1))) {
-        str += currentWord.slice(0, currentWord.length - 1);
+        if (i + 1 < sent_length) {
+            var currentWord = document.getElementById(i).innerHTML;
+            var nextWord = document.getElementById(i + 1).innerHTML;
+            console.log(nextWord);
+            if (punctuation.includes(nextWord.slice(0, nextWord.length - 1))) {
+                str += currentWord.slice(0, currentWord.length - 1);
+            }
+            else {
+                str += document.getElementById(i).innerHTML;
+            }
         }
         else {
-        str += document.getElementById(i).innerHTML;
+            str += document.getElementById(i).innerHTML;
         }
-    }
-    else {
-        str += document.getElementById(i).innerHTML;
-    }
     }
     str = str.replaceAll(" NewLineMarker ", "\n");
     document.getElementById("textarea1").value = str;
