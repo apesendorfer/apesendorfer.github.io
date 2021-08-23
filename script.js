@@ -8,8 +8,8 @@ function f1() {
     element.disabled = true;
     element.style.animation = "bgColor 10s infinite linear";
     inputText = document.getElementById("textarea1").value;
-    modifiedInputText = inputText.replaceAll("\n", " NewLineMarker ");
-    modifiedInputText = modifiedInputText.replaceAll("&#13;&#10;", " NewLineMarker ");
+    modifiedInputText = inputText.replaceAll("\r\n", " NewLineMarker ");
+    modifiedInputText = modifiedInputText.replaceAll("\n", " NewLineMarker ");
     console.log(modifiedInputText);
     var payload = {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -131,7 +131,7 @@ function change() {
             str += document.getElementById(i).innerHTML;
         }
     }
-    str = str.replaceAll(" NewLineMarker ", "&#13;&#10;");
+    str = str.replaceAll(" NewLineMarker ", "\r\n");
     document.getElementById("textarea1").value = str;
 }
 
