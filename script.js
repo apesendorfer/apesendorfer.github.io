@@ -46,14 +46,14 @@ function f1() {
 function f2(input_list) {
     text = "<div class='container2'><div class='descrip2'>"
     for (let i = 0; i < input_list.length; i++) {
-    if (input_list[i].length > 0) {
-        if (input_list[i] == "NewLineMarker") {
-        text += "<br>"
+        if (input_list[i].length > 0) {
+            if (input_list[i] == "NewLineMarker") {
+                text += "<br>"
+            }
+            else {
+                text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + " onmouseout=\"f5(this)\">" + input_list[i] + " " + "</span>";
+            }
         }
-        else {
-        text += "<span id=\"" + i + "\" onmouseover=\"f3(" + i + ")\"" + " onmouseout=\"f5(this)\">" + input_list[i] + " " + "</span>";
-        }
-    }
     }
     text += "</div></div><br>"
     document.getElementById("static-input").innerHTML = text;
@@ -67,20 +67,20 @@ var EventHandler = function() {
     console.log("output_list[i].length:", length)
     console.log("i:", num)
     if (event.key === '1' && length > 0) {
-    console.log("PRESSED 1")
-    document.getElementById(num).innerHTML = document.getElementById("b0").innerHTML.substring(3) + " ";
+        // console.log("PRESSED 1")
+        document.getElementById(num).innerHTML = document.getElementById("b0").innerHTML.substring(3) + " ";
     }
     if (event.key === '2' && length > 1) {
-    document.getElementById(num).innerHTML = document.getElementById("b1").innerHTML.substring(3) + " ";
+        document.getElementById(num).innerHTML = document.getElementById("b1").innerHTML.substring(3) + " ";
     }
     if (event.key === '3' && length > 2) {
-    document.getElementById(num).innerHTML = document.getElementById("b2").innerHTML.substring(3) + " ";
+        document.getElementById(num).innerHTML = document.getElementById("b2").innerHTML.substring(3) + " ";
     }
     if (event.key === '4' && length > 3) {
-    document.getElementById(num).innerHTML = document.getElementById("b3").innerHTML.substring(3) + " ";
+        document.getElementById(num).innerHTML = document.getElementById("b3").innerHTML.substring(3) + " ";
     }
     if (event.key === '5' && length > 4) {
-    document.getElementById(num).innerHTML = document.getElementById("b4").innerHTML.substring(3) + " ";
+        document.getElementById(num).innerHTML = document.getElementById("b4").innerHTML.substring(3) + " ";
     }
 }
 
@@ -92,9 +92,9 @@ function f3(i) {
     length = output_list[i].length;
     num = i;
     if (output_list[i].length > 0) {
-    for (let j = 0; j < output_list[i].length; j++) {
-        text2 += "<button style=\"background: #F4BFA1; border-radius: 15px; margin-right: 5px; margin-botton: 5px;\" id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML.substring(3), " + i + ")\">" + (j+1) + ". " + output_list[i][j] + "</button>"
-    }
+        for (let j = 0; j < output_list[i].length; j++) {
+            text2 += "<button style=\"background: #F4BFA1; border-radius: 15px; margin-right: 5px; margin-botton: 5px;\" id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML.substring(3), " + i + ")\">" + (j+1) + ". " + output_list[i][j] + "</button>"
+        }
     }
     document.getElementById("choices").innerHTML = text2;
     window.addEventListener('keydown', EventHandler.bind(event, length, num));
