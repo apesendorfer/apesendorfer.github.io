@@ -8,12 +8,12 @@ function f1() {
     element.disabled = true;
     element.style.animation = "bgColor 10s infinite linear";
     inputText = document.getElementById("textarea1").value;
-    inputText = inputText.replaceAll("\n", " NewLineMarker ");
-    console.log(inputText);
+    modifiedInputText = inputText.replaceAll("\n", " NewLineMarker ");
+    console.log(modifiedInputText);
     var payload = {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
-    body: JSON.stringify(inputText),
+    body: JSON.stringify(modifiedInputText),
     headers: {
         'origin': 'https://withfinesse.io',
         'Content-Type': 'application/json',
@@ -128,6 +128,7 @@ function change() {
         str += document.getElementById(i).innerHTML;
     }
     }
+    str = str.replaceAll(" NewLineMarker ", "\n");
     document.getElementById("textarea1").value = str;
 }
 
