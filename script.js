@@ -1,7 +1,7 @@
 var output_list;
 var input_list;
 var sent_length;
-var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", "---", "—", ")", "]", "}", "'", "\""]
+var punctuation = [".", ",", ";", ":", "!", "?", "-", "`", "--", "---", "—", ")", "]", "}", "'", "\"", "n't", "'s"];
 var inputText;
 function f1() {
     element = document.getElementById("finesseButton");
@@ -9,6 +9,7 @@ function f1() {
     element.style.animation = "bgColor 10s infinite linear";
     inputText = document.getElementById("textarea1").value;
     modifiedInputText = inputText.replaceAll("\n", " NewLineMarker ");
+    modifiedInputText = modifiedInputText.replaceAll("&#13;&#10;", " NewLineMarker ");
     console.log(modifiedInputText);
     var payload = {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -129,7 +130,7 @@ function change() {
             str += document.getElementById(i).innerHTML;
         }
     }
-    str = str.replaceAll(" NewLineMarker ", "\n");
+    str = str.replaceAll(" NewLineMarker ", "&#13;&#10;");
     document.getElementById("textarea1").value = str;
 }
 
