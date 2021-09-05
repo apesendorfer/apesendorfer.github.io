@@ -87,7 +87,7 @@ function f3(i) {
     num = i;
     if (output_list[i].length > 0) {
         for (let j = 0; j < output_list[i].length; j++) {
-            text2 += "<button style=\"background: #F4BFA1; border-radius: 15px; margin-right: 5px; margin-botton: 5px;\" id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML.substring(3), " + i + ")\">" + (j+1) + ". " + output_list[i][j] + "</button>"
+            text2 += "<button style=\"background: white; border-radius: 15px; margin-right: 5px; margin-botton: 5px;\" id=\"b" + j + "\" type=\"button\" onclick=\"f4(this.innerHTML.substring(3), " + i + ")\">" + (j+1) + ". " + output_list[i][j] + "</button>"
         }
     }
     document.getElementById("choices").innerHTML = text2;
